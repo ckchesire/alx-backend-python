@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-This module has the unit tests for the utility function."""
+"""This module has the unit tests for the access_nested_map utility function"""
 
 
 import unittest
@@ -28,6 +27,4 @@ class TestAccessNestedMap(unittest.TestCase):
         """Test to see if KeyError is raised when an invalid path is parsed."""
         with self.assertRaises(KeyError) as cm:
             access_nested_map(nested_map, path)
-        self.assertEqual(
-                str(cm.exception),
-                repr(path[len(cm.exeption.args[0]) - 1]))
+        self.assertEqual(str(cm.exception), repr(cm.exception.args[0]))
